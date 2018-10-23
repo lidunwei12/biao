@@ -6,15 +6,12 @@ Created on Thu May 25 11:00:46 2017
 """
 import urllib.request
 import json
-import socket
-
-ip_address = socket.gethostbyname(socket.getfqdn(socket.gethostname()))
+from config import API
 
 
-def data_prepare(id, measure_xls, content_frequency, index_library, index_frequency):
-    values = {'id': id, 'measure_xls': measure_xls, 'content_frequency': content_frequency,
-              'index_library': index_library, 'index_frequency': index_frequency}
-    url = "http://" + str(ip_address) + ":8888/api/prepare"
+def data_prepare(prepare_id, content_file, catalog_file):
+    values = {'prepare_id': prepare_id, 'content_file': content_file, 'catalog_file': catalog_file}
+    url = "http://" + str(API.IP) + ":"+str(API.PORT_ONE)+"/api/prepare"
     data = json.dumps(values).encode("utf8")
     res = urllib.request.Request(url, data, {'Content-Type': 'application/json'})
     try:

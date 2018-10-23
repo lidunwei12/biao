@@ -6,3 +6,4 @@ pywin32
 pdfminer3k
 pandas
 jieba
+http_api_exporter

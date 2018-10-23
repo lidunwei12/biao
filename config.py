@@ -1,19 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 25 11:00:46 2017
+
+@author: boblee
+"""
 import re
-ip_address = '192.168.20.240'
-step_one_port = 8888
-step_two_port = 8887
-step_three_port = 8886
-for line in open('config.ini'):
-    line =line.replace('\n','')
-    if line.find('ip =') != -1:
-        ip = line[line.find('ip =')+4:].replace(' ','')
-        print(ip)
-    if line.find('step_one') != -1:
-        step_one_port = int(re.findall(re.compile('\d+'), line)[0])
-        print(step_one_port)
-    if line.find('step_two') != -1:
-        step_two_port = int(re.findall(re.compile('\d+'), line)[0])
-        print(step_two_port)
-    if line.find('step_three') != -1:
-        step_three_port = int(re.findall(re.compile('\d+'), line)[0])
-        print(step_three_port)
+
+
+def api_text():
+    ip_address = '192.168.20.240'
+    step_one_port = 8888
+    step_two_port = 8887
+    step_three_port = 8886
+    for line in open('config.ini'):
+        line = line.replace('\n', '')
+        if line.find('ip =') != -1:
+            ip_address = line[line.find('ip =') + 4:].replace(' ', '')
+        if line.find('step_one') != -1:
+            step_one_port = int(re.findall(re.compile('\d+'), line)[0])
+        if line.find('step_two') != -1:
+            step_two_port = int(re.findall(re.compile('\d+'), line)[0])
+        if line.find('step_three') != -1:
+            step_three_port = int(re.findall(re.compile('\d+'), line)[0])
+    return ip_address, step_one_port, step_two_port, step_three_port
+
+
+class API:
+    ip_address, step_one_port, step_two_port, step_three_port = api_text()
+    IP = ip_address
+    PORT_ONE = step_one_port
+    PORT_TWO = step_two_port
+    PORT_THREE = step_three_port

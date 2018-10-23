@@ -6,14 +6,13 @@ Created on Thu May 25 11:00:46 2017
 """
 import urllib.request
 import json
-import socket
-
-ip_address = socket.gethostbyname(socket.getfqdn(socket.gethostname()))
+from config import API
 
 
-def data_begin(content_name, index_name):
-    values = {'content_home': content_name, 'index_home': index_name}
-    url = "http://" + str(ip_address) + ":8887/api/begin"
+def data_begin(begin_id, classifier_form, content_frequency, catalog_index_form, catalog_frequency):
+    values = {'begin_id': begin_id, 'classifier_form': classifier_form, 'content_frequency': content_frequency,
+              'catalog_index_form': catalog_index_form, 'catalog_frequency': catalog_frequency}
+    url = "http://" + str(API.IP) + ":" + str(API.PORT_TWO) + "/api/begin"
     data = json.dumps(values).encode("utf8")
     res = urllib.request.Request(url, data, {'Content-Type': 'application/json'})
     try:
@@ -22,4 +21,3 @@ def data_begin(content_name, index_name):
     except urllib.error.URLError as e:
         contents = e.read()
     return json.loads(contents)
-# print(data_prepare('E:/work/content_main/content_biao/temp/政策性文件.zip', 'E:/work/content_main/content_biao/temp/目录.zip'))

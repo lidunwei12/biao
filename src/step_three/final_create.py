@@ -76,9 +76,9 @@ def visual_cluster(csv_home, save_home):
     weights_create(csv_home, save_home)
     location = os.path.join(os.path.dirname(__file__))
     ratio_home = save_home + '/da_ratio.csv'
-    heatmap_home = save_home + '/heatmap.pdf'
-    level_two_home = save_home + '/level_2_clusters.pdf'
-    level_three_home = save_home + '/level_3_clusters.pdf'
+    heatmap_home = save_home + '/heat_map.pdf'
+    level_two_home = save_home + '/level_two_cluster.pdf'
+    level_three_home = save_home + '/level_three_cluster.pdf'
     ans = 'Rscript ' + location + '/code.R ' + location + ' ' + csv_home + ' ' + ratio_home + ' ' + heatmap_home + ' ' \
           + level_three_home + ' ' + level_two_home
     os.system(ans)

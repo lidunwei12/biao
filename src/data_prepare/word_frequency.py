@@ -103,11 +103,32 @@ def catalogue_word_frequency(file_dir, save_home, save_name, sheet_name):
     return '分词表创建成功'
 
 
-def prepare_main(content_home, index_home):
-    status = 0
-    prepare_docx(content_home, index_home)
-    catalogue_word_frequency(DATA_HOME + '/content/', DATA_HOME + '/step_one', '/内容分词结果.xls', '内容分词')
-    catalogue_word_frequency(DATA_HOME + '/index/', DATA_HOME + '/step_one', '/目录分词结果.xls', '目录分词')
-    return {
-        'status': status
-    }
+def prepare_main(prepare_id, content_file, catalog_file):
+    status = 1
+    home = ['/content/', '/index/', '/step_one/', '/step_two/', '/step_three']
+    for s in home:
+        make_home = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id) + s))
+        if not os.path.isdir(make_home):
+            os.mkdir(make_home)
+    try:
+        prepare_docx(content_file, catalog_file)
+        catalogue_word_frequency(DATA_HOME + str(prepare_id) + '/content/', DATA_HOME + str(prepare_id) + '/step_one',
+                                 '/内容分词结果.xls',
+                                 '内容分词')
+        catalogue_word_frequency(DATA_HOME + str(prepare_id) + '/index/', DATA_HOME + str(prepare_id) + '/step_one',
+                                 '/目录分词结果.xls', '目录分词')
+        return {
+            'prepare_id': prepare_id,
+            'prepare_status': status,
+            'content_frequency': DATA_HOME + str(prepare_id) + '/step_one/内容分词结果.xls',
+            'catalog_frequency': DATA_HOME + str(prepare_id) + '/step_one/目录分词结果.xls'
+        }
+    except:
+        status = 0
+        return {
+            'prepare_id': prepare_id,
+            'prepare_status': status,
+            'content_frequency': '',
+            'catalog_frequency': ''
+        }

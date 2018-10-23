@@ -13,16 +13,25 @@ if not os.path.isdir(DATA_HOME):
     os.mkdir(DATA_HOME)
 
 
-def begin_main(id, measure_xls, content_frequency, index_library, index_frequency):
+def begin_main(begin_id, classifier_form, content_frequency, catalog_index_form, catalog_frequency):
     status = 1
     try:
-        content_home = DATA_HOME + str(id) + '/content/'
-        save_home = DATA_HOME + str(id) + '/step_one'
-        content_main(content_home, measure_xls, content_frequency, save_home)
-        index_home = DATA_HOME + str(id) + '/index/'
-        index_main(save_home, index_library, index_home)
+        content_home = DATA_HOME + str(begin_id) + '/content/'
+        save_home = DATA_HOME + str(begin_id) + '/step_one'
+        content_main(content_home, classifier_form, content_frequency, save_home)
+        index_home = DATA_HOME + str(begin_id) + '/index/'
+        index_main(save_home, catalog_index_form, index_home)
+        return {
+            'begin_id': begin_id,
+            'status': status,
+            'level_two_untreated': DATA_HOME + str(begin_id) + '/step_one/二级指标人工修正表.xls',
+            'level_three_untreated': DATA_HOME + str(begin_id) + '/step_one/三级指标人工修正表.xls'
+        }
     except:
         status = 0
-    return {
-        'status': status
-    }
+        return {
+            'begin_id': begin_id,
+            'status': status,
+            'level_two_untreated': '',
+            'level_three_untreated': ''
+        }

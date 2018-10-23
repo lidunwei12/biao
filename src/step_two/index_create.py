@@ -98,7 +98,7 @@ def index_main(save_home, artificial_table, index_home):
         sheet2.write(i + 1, 1, line)
     for i, line in enumerate(data_miss_name):
         sheet2.write(i + 1, 0, line)
-    book.save(save_home + '/step_three/二级指标人工处理中.xls')
+    book.save(save_home + '/step_three/二级指标人工修正表.xls')
 
 
 
