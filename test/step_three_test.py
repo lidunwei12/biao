@@ -10,7 +10,7 @@ from config import API
 
 
 def data_system(matrix_id, content_frequency_xls, level_three_xls, level_two_xls):
-    values = {'matrix_id': matrix_id, 'content_frequency_xls': content_frequency_xls,
+    values = {'matrix_id': matrix_id, 'content_frequency': content_frequency_xls,
               'level_three_xls': level_three_xls, 'level_two_xls': level_two_xls}
     url = "http://" + str(API.IP) + ":" + str(API.PORT_THREE) + "/api/system"
     data = json.dumps(values).encode("utf8")

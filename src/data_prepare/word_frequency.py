@@ -5,14 +5,18 @@ Created on Thu Jul 30 16:21:28 2018
 @author: bob.lee
 """
 from src.data_prepare.pattern_to_docx import prepare_docx
-import os
 import re
 import jieba.analyse as analyse
 import numpy as np
 from xlwt import Workbook
 from zipfile import ZipFile
 from bs4 import BeautifulSoup
+import sys
+import os
 
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(rootPath)
 DATA_HOME = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/'))
 if not os.path.isdir(DATA_HOME):
     os.mkdir(DATA_HOME)
@@ -105,24 +109,30 @@ def catalogue_word_frequency(file_dir, save_home, save_name, sheet_name):
 
 def prepare_main(prepare_id, content_file, catalog_file):
     status = 1
-    home = ['/content/', '/index/', '/step_one/', '/step_two/', '/step_three']
+    temp_home = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id)))
+    if not os.path.isdir(temp_home):
+        os.mkdir(temp_home)
+    home = ['content/', 'index/', 'step_one/', 'step_two/', 'step_three/']
     for s in home:
         make_home = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id) + s))
+            os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id) + '/' + s))
         if not os.path.isdir(make_home):
             os.mkdir(make_home)
     try:
-        prepare_docx(content_file, catalog_file)
-        catalogue_word_frequency(DATA_HOME + str(prepare_id) + '/content/', DATA_HOME + str(prepare_id) + '/step_one',
+        prepare_docx(prepare_id, content_file, catalog_file)
+        catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/content/',
+                                 DATA_HOME + '/' + str(prepare_id) + '/step_one',
                                  '/内容分词结果.xls',
                                  '内容分词')
-        catalogue_word_frequency(DATA_HOME + str(prepare_id) + '/index/', DATA_HOME + str(prepare_id) + '/step_one',
+        catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/index/',
+                                 DATA_HOME + '/' + str(prepare_id) + '/step_one',
                                  '/目录分词结果.xls', '目录分词')
         return {
             'prepare_id': prepare_id,
             'prepare_status': status,
-            'content_frequency': DATA_HOME + str(prepare_id) + '/step_one/内容分词结果.xls',
-            'catalog_frequency': DATA_HOME + str(prepare_id) + '/step_one/目录分词结果.xls'
+            'content_frequency': DATA_HOME + '/' + str(prepare_id) + '/step_one/内容分词结果.xls',
+            'catalog_frequency': DATA_HOME + '/' + str(prepare_id) + '/step_one/目录分词结果.xls'
         }
     except:
         status = 0

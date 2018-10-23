@@ -21,3 +21,8 @@ def data_begin(begin_id, classifier_form, content_frequency, catalog_index_form,
     except urllib.error.URLError as e:
         contents = e.read()
     return json.loads(contents)
+
+
+print(data_begin(1, 'E:/work/content_main/class.xls', 'E:/work/content_main/content_biao/temp/1/step_one/内容分词结果.xls',
+                 'E:/work/content_main/temp/lidunwei/step_three/二级指标人工处理前.xls',
+                 'E:/work/content_main/content_biao/temp/1/step_one/内容分词结果.xls'))

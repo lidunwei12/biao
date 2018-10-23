@@ -5,14 +5,17 @@ Created on Thu May 25 11:00:46 2017
 @author: boblee
 """
 import re
-
+import os
+DATA_HOME = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+if not os.path.isdir(DATA_HOME):
+    os.mkdir(DATA_HOME)
 
 def api_text():
     ip_address = '192.168.20.240'
     step_one_port = 8888
     step_two_port = 8887
     step_three_port = 8886
-    for line in open('config.ini'):
+    for line in open(DATA_HOME+'/config.ini'):
         line = line.replace('\n', '')
         if line.find('ip =') != -1:
             ip_address = line[line.find('ip =') + 4:].replace(' ', '')
