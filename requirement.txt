@@ -1,0 +1,8 @@
+xlrd
+python-docx
+xlwt
+numpy
+pywin32
+pdfminer3k
+pandas
+jieba

@@ -1,0 +1,54 @@
+10-22 13:58 - SimpleApiServer.bind INFO  : Bind route "/api/prepare" with function "prepare_main"
+10-22 13:58 - SimpleApiServer.start INFO  : The server starts at port 8888
+10-22 13:58 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 13:58 - SimpleApiServer.post ERROR : Traceback (most recent call last):
+  File "D:\python\lib\site-packages\http_api_exporter\handler.py", line 63, in post
+    result = self.__function(*input_array, **args_dict)
+TypeError: prepare_main() got an unexpected keyword argument 'content_name'
+
+10-22 13:58 - tornado.access.log_request ERROR : 500 POST /api/prepare (192.168.20.240) 1.00ms
+10-22 13:59 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 13:59 - SimpleApiServer.post ERROR : Traceback (most recent call last):
+  File "D:\python\lib\site-packages\http_api_exporter\handler.py", line 63, in post
+    result = self.__function(*input_array, **args_dict)
+TypeError: prepare_main() got an unexpected keyword argument 'content_name'
+
+10-22 13:59 - tornado.access.log_request ERROR : 500 POST /api/prepare (192.168.20.240) 2.01ms
+10-22 14:00 - SimpleApiServer.bind INFO  : Bind route "/api/prepare" with function "prepare_main"
+10-22 14:00 - SimpleApiServer.start INFO  : The server starts at port 8888
+10-22 14:00 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 14:00 - SimpleApiServer.post ERROR : Traceback (most recent call last):
+  File "D:\python\lib\site-packages\http_api_exporter\handler.py", line 63, in post
+    result = self.__function(*input_array, **args_dict)
+TypeError: prepare_main() got an unexpected keyword argument 'content_name'
+
+10-22 14:00 - tornado.access.log_request ERROR : 500 POST /api/prepare (192.168.20.240) 2.00ms
+10-22 14:00 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 14:00 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.20.240) 176.14ms
+10-22 14:01 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 14:01 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.20.240) 160.11ms
+10-22 14:18 - SimpleApiServer.bind INFO  : Bind route "/api/prepare" with function "prepare_main"
+10-22 14:18 - SimpleApiServer.start INFO  : The server starts at port 8888
+10-22 14:18 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 14:21 - SimpleApiServer.post ERROR : Traceback (most recent call last):
+  File "D:\python\lib\site-packages\http_api_exporter\handler.py", line 63, in post
+    result = self.__function(*input_array, **args_dict)
+  File "E:\work\content_main\content_biao\src\data_prepare\word_frequency.py", line 108, in prepare_main
+    prepare_docx(content_home, index_home)
+  File "E:\work\content_main\content_biao\src\data_prepare\pattern_to_docx.py", line 161, in prepare_docx
+    word_to_docx(DATA_HOME + '/index/')
+  File "E:\work\content_main\content_biao\src\data_prepare\pattern_to_docx.py", line 143, in word_to_docx
+    os.remove(file_home + file)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'E:\\work\\content_main\\content_biao\\temp/index/上海市发布加快建设科创中心相关的22条意见.doc'
+
+10-22 14:21 - tornado.access.log_request ERROR : 500 POST /api/prepare (192.168.20.240) 188472.74ms
+10-22 15:37 - SimpleApiServer.bind INFO  : Bind route "/api/prepare" with function "prepare_main"
+10-22 15:37 - SimpleApiServer.start INFO  : Port 8888 has been used.
+10-22 15:37 - SimpleApiServer.bind INFO  : Bind route "/api/prepare" with function "prepare_main"
+10-22 15:37 - SimpleApiServer.start INFO  : The server starts at port 8888
+10-22 15:37 - SimpleApiServer.post INFO  : A coming request at route "/api/prepare".
+10-22 15:50 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.20.240) 769245.02ms
+10-22 17:06 - SimpleApiServer.bind INFO  : Bind route "/api/prepare" with function "prepare_main"
+10-22 17:06 - SimpleApiServer.start INFO  : The server starts at port 8888
+10-22 17:07 - tornado.access.log_request WARNING : 405 GET /api/prepare (192.168.20.240) 1.00ms
+10-22 17:07 - tornado.access.log_request WARNING : 404 GET /favicon.ico (192.168.20.240) 0.00ms
