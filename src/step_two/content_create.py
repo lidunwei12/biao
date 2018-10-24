@@ -55,27 +55,39 @@ def content_main(file_home, classifier_home, key_word_home, save_home):
         if result:
             content_word.append(result)
     for file in os.listdir(file_home):
-        # try:
-        print(file)
-        if file.find('pdf') == -1:
-            content = []
-            file = docx.Document(file_home + file)
-            for para in file.paragraphs:
-                content.append(para.text)
-            result = ''.join(content)
-            rr = re.compile(r'，|。|！|？|；', re.I)  # 不区分大小写
-            match = re.split(rr, result)
-            result_key = []
-            result_content = []
-            for m in range(len(content_liang)):
+        try:
+            print(file)
+            if file.find('pdf') == -1:
+                content = []
+                if file.find('~$') != -1:
+                    continue
+                file = docx.Document(file_home + file)
+                for para in file.paragraphs:
+                    content.append(para.text)
+                result = ''.join(content)
+                rr = re.compile(r'，|。|！|？|；', re.I)  # 不区分大小写
+                match = re.split(rr, result)
+                result_key = []
+                result_content = []
+                # print(len(content_word),len(match),len(content_liang))
                 for i in range(len(content_word)):
                     for j in range(len(match)):
-                        temp_ans = match[j].find(content_word[i])
-                        ans_temp = match[j].find(content_liang[m])
-                        if temp_ans != -1 and ans_temp != -1:
-                            if temp_ans < ans_temp:
-                                if content_word[i].find(content_liang[m]) != -1:
-                                    if len(re.findall(re.compile(content_liang[m]), match[j])) > 1:
+                        for m in range(len(content_liang)):
+                            temp_ans = match[j].find(content_word[i])
+                            ans_temp = match[j].find(content_liang[m])
+                            if temp_ans != -1 and ans_temp != -1:
+                                if temp_ans < ans_temp:
+                                    if content_word[i].find(content_liang[m]) != -1:
+                                        if len(re.findall(re.compile(content_liang[m]), match[j])) > 1:
+                                            if m in no_number:
+                                                temp = liang_no[no_number[no_number.index(m)]]
+                                                if content_word[i] not in temp:
+                                                    result_key.append(content_word[i] + ' ' + content_liang[m])
+                                                    result_content.append(match[j])
+                                            else:
+                                                result_key.append(content_word[i] + ' ' + content_liang[m])
+                                                result_content.append(match[j])
+                                    else:
                                         if m in no_number:
                                             temp = liang_no[no_number[no_number.index(m)]]
                                             if content_word[i] not in temp:
@@ -84,22 +96,16 @@ def content_main(file_home, classifier_home, key_word_home, save_home):
                                         else:
                                             result_key.append(content_word[i] + ' ' + content_liang[m])
                                             result_content.append(match[j])
-                                else:
-                                    if m in no_number:
-                                        temp = liang_no[no_number[no_number.index(m)]]
-                                        if content_word[i] not in temp:
-                                            result_key.append(content_word[i] + ' ' + content_liang[m])
-                                            result_content.append(match[j])
-                                    else:
-                                        result_key.append(content_word[i] + ' ' + content_liang[m])
-                                        result_content.append(match[j])
-            for i, line in enumerate(result_key):
-                sheet1.write(ans_line + i + 1, 0, line)
-            for i, line in enumerate(result_content):
-                sheet1.write(ans_line + i + 1, 1, line)
-            ans_line = ans_line + len(result_key)
-        # except Exception as e:
-        #     print(e)
+                for i, line in enumerate(result_key):
+                    sheet1.write(ans_line + i + 1, 0, line)
+                for i, line in enumerate(result_content):
+                    sheet1.write(ans_line + i + 1, 1, line)
+                ans_line = ans_line + len(result_key)
+        except Exception as e:
+            pass
     book.save(save_home + '/三级指标人工修正表.xls')
 
 
+# content_main(DATA_HOME + '/1' +  '/content/', r'C:\Users\yry\Documents\WeChat Files\wxid_gp6l5oft4qci42\Files\量词库.xls',
+#              DATA_HOME + '/1' + '/step_one/内容分词结果.xls',
+#              DATA_HOME + '/1' + '/step_two')

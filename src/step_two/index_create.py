@@ -18,6 +18,8 @@ def content_read(index_home):
     index_content = []
     name_content = []
     for file_name in os.listdir(index_home):
+        if file_name.find('~$') != -1:
+            continue
         file = docx.Document(index_home + file_name)
         for para in file.paragraphs:
             temp_content = para.text
@@ -64,11 +66,10 @@ def index_main(save_home, artificial_table, index_home):
 
     for i in range(len(result)):
         for j in result[i][1]:
-            for m in result[i][2]:
-                for i_index, key in enumerate(content_index):
-                    if j in key or j in key:
-                        # print([result[i][0][0], i_index, content_name[i_index]])
-                        result_ans.append([result[i][0][0], i_index, content_name[i_index]])
+            for i_index, key in enumerate(content_index):
+                if j in key:
+                    # print([result[i][0][0], i_index, content_name[i_index]])
+                    result_ans.append([result[i][0][0], i_index, content_name[i_index]])
     book = Workbook(encoding='utf-8')
     sheet1 = book.add_sheet('Sheet1')
     sheet2 = book.add_sheet('人工查看')
@@ -79,7 +80,6 @@ def index_main(save_home, artificial_table, index_home):
     index_number = []
     for i in result_ans:
         index_number.append(i[1])
-
         two_content.append(i[0])
         two_name.append(i[2])
     for i in range(len(content_index)):
@@ -98,7 +98,7 @@ def index_main(save_home, artificial_table, index_home):
         sheet2.write(i + 1, 1, line)
     for i, line in enumerate(data_miss_name):
         sheet2.write(i + 1, 0, line)
-    book.save(save_home + '/step_three/二级指标人工修正表.xls')
+    book.save(save_home + '/二级指标人工修正表.xls')
 
 
 

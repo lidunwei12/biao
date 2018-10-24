@@ -18,7 +18,7 @@ def weights_create(csv_name, save_home):
     book = Workbook(encoding='utf-8')
     sheet1 = book.add_sheet('等同权重')
     sheet2 = book.add_sheet('加权权重')
-    f = open(csv_name)
+    f = open(csv_name, encoding='gb18030')
     res = pd.read_csv(f)
     level_two = []
     level_two_name = []
@@ -82,3 +82,4 @@ def visual_cluster(csv_home, save_home):
     ans = 'Rscript ' + location + '/code.R ' + location + ' ' + csv_home + ' ' + ratio_home + ' ' + heatmap_home + ' ' \
           + level_three_home + ' ' + level_two_home
     os.system(ans)
+# weights_create(DATA_HOME+'/1/step_three/指标矩阵.csv',DATA_HOME)

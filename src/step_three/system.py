@@ -20,16 +20,16 @@ if not os.path.isdir(DATA_HOME):
     os.mkdir(DATA_HOME)
 
 
-def system_create(matrix_id, content_frequency_xls, level_three_xls, level_two_xls):
+def system_create(matrix_id, content_frequency, level_three_xls, level_two_xls):
     status = 1
     save_home = DATA_HOME + '/' + str(matrix_id) + '/step_three/'
     index_home = DATA_HOME + '/' + str(matrix_id) + '/index/'
     try:
-        content_check_main(content_frequency_xls, level_three_xls, save_home)
+        content_check_main(content_frequency, level_three_xls, save_home)
         level_two_handle(index_home, level_two_xls, save_home)
         level_two_excel = DATA_HOME + '/' + str(matrix_id) + '/step_three/二级指标.xls'
         level_three_excel = DATA_HOME + '/' + str(matrix_id) + '/step_three/三级指标.xls'
-        final_xls(content_frequency_xls, level_two_excel, level_three_excel, save_home)
+        final_xls(content_frequency, level_two_excel, level_three_excel, save_home)
         create_index_matrix(DATA_HOME + '/' + str(matrix_id) + '/step_three/结果.xls', save_home)
         visual_cluster(DATA_HOME + '/' + str(matrix_id) + '/step_three/指标矩阵.csv', save_home)
         return {

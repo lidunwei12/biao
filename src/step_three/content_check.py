@@ -52,7 +52,7 @@ def content_check_main(data_home, data_handle_home, save_home):
                 sheet1.write(i + 1, j + 1, m)
         for i, line in enumerate(content_word):
             sheet1.write(i + 1, 0, line)
-        book.save(save_home + '/step_two/三级指标.xls')
+        book.save(save_home + '/三级指标.xls')
         print(len(result_content))
     except ValueError as e:
         print(e)

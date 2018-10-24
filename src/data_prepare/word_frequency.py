@@ -75,7 +75,8 @@ def catalogue_word_frequency(file_dir, save_home, save_name, sheet_name):
         word_value = 0
         word_dict[word_content] = word_value
     for word_file in os.listdir(file_dir):
-        print(word_file)
+        if word_file.find('~$')!=-1:
+            continue
         file_name.append(word_file)
         _, content_temp = word_choose(file_dir + word_file)
         for key, value in word_dict.items():
@@ -95,14 +96,25 @@ def catalogue_word_frequency(file_dir, save_home, save_name, sheet_name):
     for key in word_content_temp:
         word_content1.append(key)
     num = [[row[i] for row in num] for i in range(len(num[0]))]
-    s2 = np.reshape(np.array(num), (len(word_result), len(file_name)))
+    content_num = []
+    final_word = []
+    for i in range(len(word_result)):
+        content_tem = []
+        for j in range(len(file_name)):
+            content_tem.append(num[i][j])
+        if int(sum(content_tem)) < len(file_name):
+            continue
+        else:
+            final_word.append(word_content1[i])
+            content_num.append(content_tem)
+    s2 = np.reshape(np.array(content_num), (len(final_word ), len(file_name)))
     for i, line in enumerate(s2.tolist()):
         for j, m in enumerate(line):
             sheet1.write(i + 1, j + 1, m)
-    for i, line in enumerate(word_content1):
+    for i, line in enumerate(final_word):
         sheet1.write(i + 1, 0, line)
     for i, line in enumerate(file_name):
-        sheet1.write(0, i + 1, line)
+        sheet1.write(0, i+1 , line)
     book.save(save_home + save_name)
     return '分词表创建成功'
 

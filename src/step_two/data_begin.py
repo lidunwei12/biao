@@ -20,15 +20,15 @@ def begin_main(begin_id, classifier_form, content_frequency, catalog_index_form,
     status = 1
     try:
         content_home = DATA_HOME + '/' + str(begin_id) + '/content/'
-        save_home = DATA_HOME + '/' + str(begin_id) + '/step_one'
+        save_home = DATA_HOME + '/' + str(begin_id) + '/step_two'
         content_main(content_home, classifier_form, content_frequency, save_home)
         index_home = DATA_HOME + '/' + str(begin_id) + '/index/'
         index_main(save_home, catalog_index_form, index_home)
         return {
             'begin_id': begin_id,
             'status': status,
-            'level_two_untreated': DATA_HOME + '/' + str(begin_id) + '/step_one/二级指标人工修正表.xls',
-            'level_three_untreated': DATA_HOME + '/' + str(begin_id) + '/step_one/三级指标人工修正表.xls'
+            'level_two_untreated': DATA_HOME + '/' + str(begin_id) + '/step_two/二级指标人工修正表.xls',
+            'level_three_untreated': DATA_HOME + '/' + str(begin_id) + '/step_two/三级指标人工修正表.xls'
         }
     except:
         status = 0

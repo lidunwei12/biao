@@ -13,6 +13,6 @@ if not os.path.isdir(DATA_HOME):
 
 
 def zip_main(zip_file, extract_home):
-    output = subprocess.check_output('start winrar e ' + zip_file + ' ' + extract_home, stderr=subprocess.STDOUT,
+    output = subprocess.check_output('start winrar e -o+ ' + zip_file + ' ' + extract_home, stderr=subprocess.STDOUT,
                                      shell=True)
     return 'ok'

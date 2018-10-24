@@ -21,3 +21,7 @@ def data_system(matrix_id, content_frequency_xls, level_three_xls, level_two_xls
     except urllib.error.URLError as e:
         contents = e.read()
     return json.loads(contents)
+
+
+print(data_system(1, 'E:/work/content_main/test/分词结果.xls', 'E:/work/content_main/temp/step_two/合集v12__完成.xls',
+                 'E:/work/content_main/temp/step_three/二级指标 -完成.xls',))

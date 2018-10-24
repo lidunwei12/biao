@@ -22,4 +22,4 @@ def data_prepare(prepare_id, content_file, catalog_file):
     return json.loads(contents)
 
 
-print(data_prepare(1,'E:/work/content_main/content_biao/temp/政策性文件.zip', 'E:/work/content_main/content_biao/temp/目录.zip'))
+print(data_prepare(1,'E:/work/content_main/content_biao/temp/完成.rar', 'E:/work/content_main/content_biao/temp/目录.rar'))

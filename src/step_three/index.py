@@ -24,6 +24,8 @@ def level_two_handle(index_home, level_two_home, save_home):
           """
     file_name = []
     for file in os.listdir(index_home):
+        if file.find('~$') != -1:
+            continue
         file = file[0:file.find('.')]
         # print(file)
         file_name.append(file)
@@ -73,7 +75,7 @@ def level_two_handle(index_home, level_two_home, save_home):
         sheet1.write(0, i + 1, line)
     for i, line in enumerate(content_level_two):
         sheet1.write(i + 1, 0, line)
-    book.save(save_home + '/step_three/二级指标.xls')
+    book.save(save_home + '/二级指标.xls')
 
 
 
