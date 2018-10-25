@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 import sys
 import os
 
+home = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
@@ -75,7 +76,7 @@ def catalogue_word_frequency(file_dir, save_home, save_name, sheet_name):
         word_value = 0
         word_dict[word_content] = word_value
     for word_file in os.listdir(file_dir):
-        if word_file.find('~$')!=-1:
+        if word_file.find('~$') != -1:
             continue
         file_name.append(word_file)
         _, content_temp = word_choose(file_dir + word_file)
@@ -107,50 +108,38 @@ def catalogue_word_frequency(file_dir, save_home, save_name, sheet_name):
         else:
             final_word.append(word_content1[i])
             content_num.append(content_tem)
-    s2 = np.reshape(np.array(content_num), (len(final_word ), len(file_name)))
+    s2 = np.reshape(np.array(content_num), (len(final_word), len(file_name)))
     for i, line in enumerate(s2.tolist()):
         for j, m in enumerate(line):
             sheet1.write(i + 1, j + 1, m)
     for i, line in enumerate(final_word):
         sheet1.write(i + 1, 0, line)
     for i, line in enumerate(file_name):
-        sheet1.write(0, i+1 , line)
+        sheet1.write(0, i + 1, line)
     book.save(save_home + save_name)
     return '分词表创建成功'
 
 
 def prepare_main(prepare_id, content_file, catalog_file):
-    status = 1
-    temp_home = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id)))
-    if not os.path.isdir(temp_home):
-        os.mkdir(temp_home)
-    home = ['content/', 'index/', 'step_one/', 'step_two/', 'step_three/']
-    for s in home:
-        make_home = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id) + '/' + s))
-        if not os.path.isdir(make_home):
-            os.mkdir(make_home)
-    try:
-        prepare_docx(prepare_id, content_file, catalog_file)
-        catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/content/',
-                                 DATA_HOME + '/' + str(prepare_id) + '/step_one',
-                                 '/内容分词结果.xls',
-                                 '内容分词')
-        catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/index/',
-                                 DATA_HOME + '/' + str(prepare_id) + '/step_one',
-                                 '/目录分词结果.xls', '目录分词')
-        return {
-            'prepare_id': prepare_id,
-            'prepare_status': status,
-            'content_frequency': DATA_HOME + '/' + str(prepare_id) + '/step_one/内容分词结果.xls',
-            'catalog_frequency': DATA_HOME + '/' + str(prepare_id) + '/step_one/目录分词结果.xls'
-        }
-    except:
-        status = 0
-        return {
-            'prepare_id': prepare_id,
-            'prepare_status': status,
-            'content_frequency': '',
-            'catalog_frequency': ''
-        }
+    with open(home + "/status.txt", "a", encoding='utf8') as f:
+        f.write(prepare_id + ' 准备挖掘中' + '\n')
+        f.close()
+    # try:
+    prepare_docx(content_file, catalog_file)
+    catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/content/',
+                             DATA_HOME + '/' + str(prepare_id) + '/step_one',
+                             '/内容分词结果.xls',
+                             '内容分词')
+    catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/index/',
+                             DATA_HOME + '/' + str(prepare_id) + '/step_one',
+                             '/目录分词结果.xls', '目录分词')
+    content_frequency_result = DATA_HOME + '/' + str(prepare_id) + '/step_one/内容分词结果.xls'
+    catalog_frequency_result = DATA_HOME + '/' + str(prepare_id) + '/step_one/目录分词结果.xls'
+    with open(home + "/status.txt", "a", encoding='utf8') as f:
+        f.write(prepare_id + ' 准备挖掘成功 ' + content_frequency_result + ' ' + catalog_frequency_result + '\n')
+        f.close()
+    # except:
+    #     with open(home + "/status.txt", "a", encoding='utf8') as f:
+    #         f.write(prepare_id + ' 准备挖掘失败'+'\n')
+    #         f.close()
+prepare_main('s15n','E:\\biao\\temp/s15n/content/','E:\\biao\\temp/s15n/index/')

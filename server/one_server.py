@@ -7,20 +7,20 @@ Created on Thu May 25 09:09:35 2017
 from http_api_exporter import ApiHttpServer
 import sys
 import os
-
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
-import src.step_three.system as system
+import src.step.step_one as prepare
 from config import API
 
 
-def system_server():
+def prepare_server():
     app = ApiHttpServer()
-    app.bind("/api/system", system.system_create)
-    app.start(API.PORT_THREE)
-
-
+    app.bind("/api/prepare", prepare.prepare_one)
+    app.start(API.PORT_ONE)
+    
+    
 if __name__ == "__main__":
-    system_server()
+    prepare_server()
+

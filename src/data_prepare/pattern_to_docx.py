@@ -152,14 +152,6 @@ def word_to_docx(file_home):
     return 'doc 转换 docx 成功'
 
 
-def prepare_docx(prepare_id,content_name, index_name):
-    status = 0
-    try:
-        zip_main(content_name, DATA_HOME + '/' + str(prepare_id) + '/content/')
-        zip_main(index_name, DATA_HOME + '/' + str(prepare_id) + '/index/')
-    except Exception as e:
-        status = 1
-    time.sleep(2)
-    word_to_docx(DATA_HOME + '/' + str(prepare_id) + '/content/')
-    word_to_docx(DATA_HOME + '/' + str(prepare_id) + '/index/')
-    return status
+def prepare_docx(content_name, index_name):
+    word_to_docx(content_name)
+    word_to_docx(index_name)

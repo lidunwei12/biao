@@ -27,7 +27,7 @@ def final_xls(frequency_xls, level_two_xls, level_three_xls, save_home):
          :param: save_home:结果表保存路径
          """
     workbook = xlrd.open_workbook(frequency_xls)
-    sheet_one = workbook.sheet_by_name('list')
+    sheet_one = workbook.sheet_by_name(workbook.sheet_names()[0])
     content_word = []
     for i in range(sheet_one.nrows):
         data = []
@@ -47,7 +47,7 @@ def final_xls(frequency_xls, level_two_xls, level_three_xls, save_home):
     name = np.reshape(np.array(name), (sheet_one.nrows, 1))
     content_word = np.append(content_word, name, axis=1)
     workbook_level_three = xlrd.open_workbook(level_three_xls)
-    sheet_level_three = workbook_level_three.sheet_by_name('list')
+    sheet_level_three = workbook_level_three.sheet_by_name(workbook_level_three.sheet_names()[0])
     content_level_three = []
     for i in range(sheet_level_three.nrows):
         data = []
@@ -60,7 +60,7 @@ def final_xls(frequency_xls, level_two_xls, level_three_xls, save_home):
     print(content_level_three.shape)
     final_sheet = np.append(content_word, content_level_three, axis=1)
     workbook_level_two = xlrd.open_workbook(level_two_xls)
-    sheet_level_two = workbook_level_two.sheet_by_name('list')
+    sheet_level_two = workbook_level_two.sheet_by_name(workbook_level_two.sheet_names()[0])
     content_level_two = []
     for i in range(sheet_level_two.nrows):
         data = []

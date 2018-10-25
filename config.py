@@ -15,6 +15,7 @@ def api_text():
     step_one_port = 8888
     step_two_port = 8887
     step_three_port = 8886
+    step_four_port = 8885
     for line in open(DATA_HOME+'/config.ini'):
         line = line.replace('\n', '')
         if line.find('ip =') != -1:
@@ -25,12 +26,15 @@ def api_text():
             step_two_port = int(re.findall(re.compile('\d+'), line)[0])
         if line.find('step_three') != -1:
             step_three_port = int(re.findall(re.compile('\d+'), line)[0])
-    return ip_address, step_one_port, step_two_port, step_three_port
+        if line.find('step_four') != -1:
+            step_four_port = int(re.findall(re.compile('\d+'), line)[0])
+    return ip_address, step_one_port, step_two_port, step_three_port,step_four_port
 
 
 class API:
-    ip_address, step_one_port, step_two_port, step_three_port = api_text()
+    ip_address, step_one_port, step_two_port, step_three_port,step_four_port = api_text()
     IP = ip_address
     PORT_ONE = step_one_port
     PORT_TWO = step_two_port
     PORT_THREE = step_three_port
+    PORT_FOUR = step_four_port
