@@ -19,7 +19,7 @@ from src.step_three.system import system_create
 
 def get_task(number):
     count = 0
-    for i, line in enumerate(open(rootPath + "/task.txt", "r")):
+    for i, line in enumerate(open(rootPath + "/task.txt", "r",encoding='utf8')):
         if i >= number:
             line = line.strip('\n')
             temp_ = str(line).split(' ')
@@ -29,9 +29,9 @@ def get_task(number):
             if len(temp_) == 6:
                 if temp_[1] == 'step_two':
                     begin_main(temp_[0], temp_[2], temp_[3], temp_[4], temp_[5])
-            if len(temp_) == 5:
+            if len(temp_) == 4:
                 if temp_[1] == 'step_three':
-                    system_create(temp_[0], temp_[2], temp_[3], temp_[4])
+                    system_create(temp_[0], temp_[2], temp_[3])
         count = count + 1
     return count
 
@@ -44,6 +44,7 @@ def execute_main():
     number = 0
     while 1:
         number = get_task(number)
+        time.sleep(2)
 
 
 execute_main()

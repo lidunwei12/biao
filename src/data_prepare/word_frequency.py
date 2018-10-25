@@ -124,22 +124,22 @@ def prepare_main(prepare_id, content_file, catalog_file):
     with open(home + "/status.txt", "a", encoding='utf8') as f:
         f.write(prepare_id + ' 准备挖掘中' + '\n')
         f.close()
-    # try:
-    prepare_docx(content_file, catalog_file)
-    catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/content/',
-                             DATA_HOME + '/' + str(prepare_id) + '/step_one',
-                             '/内容分词结果.xls',
-                             '内容分词')
-    catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/index/',
-                             DATA_HOME + '/' + str(prepare_id) + '/step_one',
-                             '/目录分词结果.xls', '目录分词')
-    content_frequency_result = DATA_HOME + '/' + str(prepare_id) + '/step_one/内容分词结果.xls'
-    catalog_frequency_result = DATA_HOME + '/' + str(prepare_id) + '/step_one/目录分词结果.xls'
-    with open(home + "/status.txt", "a", encoding='utf8') as f:
-        f.write(prepare_id + ' 准备挖掘成功 ' + content_frequency_result + ' ' + catalog_frequency_result + '\n')
-        f.close()
-    # except:
-    #     with open(home + "/status.txt", "a", encoding='utf8') as f:
-    #         f.write(prepare_id + ' 准备挖掘失败'+'\n')
-    #         f.close()
-prepare_main('s15n','E:\\biao\\temp/s15n/content/','E:\\biao\\temp/s15n/index/')
+    try:
+        prepare_docx(content_file, catalog_file)
+        catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/content/',
+                                 DATA_HOME + '/' + str(prepare_id) + '/step_one',
+                                 '/内容分词结果.xls',
+                                 '内容分词')
+        catalogue_word_frequency(DATA_HOME + '/' + str(prepare_id) + '/index/',
+                                 DATA_HOME + '/' + str(prepare_id) + '/step_one',
+                                 '/目录分词结果.xls', '目录分词')
+        content_frequency_result = DATA_HOME + '/' + str(prepare_id) + '/step_one/内容分词结果.xls'
+        catalog_frequency_result = DATA_HOME + '/' + str(prepare_id) + '/step_one/目录分词结果.xls'
+        with open(home + "/status.txt", "a", encoding='utf8') as f:
+            f.write(prepare_id + ' 准备挖掘成功 ' + content_frequency_result + ' ' + catalog_frequency_result + '\n')
+            f.close()
+    except:
+        with open(home + "/status.txt", "a", encoding='utf8') as f:
+            f.write(prepare_id + ' 准备挖掘失败'+'\n')
+            f.close()
+# prepare_main('fcbf','E:\\biao\\temp/fcbf/content/','E:\\biao\\temp/fcbf/index/')

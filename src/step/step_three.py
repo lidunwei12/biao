@@ -18,7 +18,7 @@ def matrix_task(matrix_id, level_three_xls, level_two_xls):
     if count == 0:
         with open(home + "/task.txt", "a", encoding='utf8') as f:
             f.write(
-                matrix_id + 'step_three' + ' ' + level_three_xls + ' ' + level_two_xls + '\n')
+                matrix_id +' '+ 'step_three' + ' ' + level_three_xls + ' ' + level_two_xls + '\n')
             f.close()
         with open(home + "/status.txt", "a", encoding='utf8') as f:
             f.write(matrix_id + ' 待生成指标矩阵' + '\n')

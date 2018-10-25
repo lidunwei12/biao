@@ -1,3 +1,1 @@
 
-s15n step_one E:\biao\temp/s15n/content/ E:\biao\temp/s15n/index/
-s15n step_two E:/biao/temp/class.xls E:/biao/temp/s15n/step_one/内容分词结果.xls E:/biao/temp/二级指标人工处理前.xls E:/biao/temp/s15n/step_one/目录分词结果.xls

@@ -23,6 +23,6 @@ def data_begin(begin_id, classifier_form, content_frequency, catalog_index_form,
     return json.loads(contents)
 
 
-print(data_begin('s15n', 'E:/biao/temp/class.xls', 'E:/biao/temp/s15n/step_one/内容分词结果.xls',
+print(data_begin('cm5a', 'E:/biao/temp/class.xls', 'E:/biao/temp/1/内容分词结果.xls',
                  'E:/biao/temp/二级指标人工处理前.xls',
-                 'E:/biao/temp/s15n/step_one/目录分词结果.xls'))
+                 'E:/biao/temp/目录分词结果.xls'))

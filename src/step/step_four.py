@@ -31,7 +31,7 @@ def status_task(task_id):
         if len(temp_) > 2:
             file = temp_content[temp_content.index(temp_[2]):]
     elif len(status_content) != 0:
-        temp_content = status_content[len(status_content) - 1]
+        temp_content = status_content[0]
         temp_ = temp_content.split(' ')
         status = temp_[1]
     return {

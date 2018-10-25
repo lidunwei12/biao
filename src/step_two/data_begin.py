@@ -19,7 +19,7 @@ if not os.path.isdir(DATA_HOME):
 
 def begin_main(begin_id, classifier_form, content_frequency, catalog_index_form, catalog_frequency):
     with open(home + "/status.txt", "a", encoding='utf8') as f:
-        f.write(begin_id + ' 开始挖掘中 ' +  '\n')
+        f.write(begin_id + ' 开始挖掘中 ' + '\n')
         f.close()
     try:
         content_home = DATA_HOME + '/' + str(begin_id) + '/content/'
@@ -36,3 +36,10 @@ def begin_main(begin_id, classifier_form, content_frequency, catalog_index_form,
         with open(home + "/status.txt", "a", encoding='utf8') as f:
             f.write(begin_id + ' 开始挖掘失败 ' + '\n')
             f.close()
+# print(begin_main('3kr0', 'E:/biao/temp/class.xls', 'E:/biao/temp/3kr0/内容分词结果.xls',
+#                  'E:/biao/temp/二级指标人工处理前.xls',
+#                  'E:/biao/temp/目录分词结果.xls'))
+
+# print(begin_main('pk2c', 'E:/biao/temp/class.xls', 'E:/biao/temp/pk2c/step_one/内容分词结果.xls',
+# #                  'E:/biao/temp/二级指标人工处理前.xls',
+# #                  'E:/biao/temp/pk2c/step_one/目录分词结果.xls'))

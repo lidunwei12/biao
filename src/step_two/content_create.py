@@ -69,7 +69,7 @@ def content_main(file_home, classifier_home, key_word_home, save_home):
                 match = re.split(rr, result)
                 result_key = []
                 result_content = []
-                # print(len(content_word),len(match),len(content_liang))
+                print(len(content_word),len(match),len(content_liang))
                 for i in range(len(content_word)):
                     for j in range(len(match)):
                         for m in range(len(content_liang)):

@@ -21,7 +21,8 @@ if not os.path.isdir(DATA_HOME):
     os.mkdir(DATA_HOME)
 
 
-def system_create(matrix_id, content_frequency, level_three_xls, level_two_xls):
+def system_create(matrix_id, level_three_xls, level_two_xls):
+    content_frequency = DATA_HOME + '/' + str(matrix_id) + '/'+'内容分词结果.xls'
     save_home = DATA_HOME + '/' + str(matrix_id) + '/step_three/'
     index_home = DATA_HOME + '/' + str(matrix_id) + '/index/'
     with open(home + "/status.txt", "a", encoding='utf8') as f:
@@ -44,7 +45,7 @@ def system_create(matrix_id, content_frequency, level_three_xls, level_two_xls):
         with open(home + "/status.txt", "a", encoding='utf8') as f:
             f.write(
                 matrix_id + ' 生成指标矩阵成功 ' + data_weights + ' ' + data_ratio + ' ' + level_three_cluster + ' ' + level_two_cluster
-                + ' ' + heat_map + ' ' + index_home + ' ' + index_matrix + '\n')
+                + ' ' + heat_map + ' ' + index_matrix + '\n')
             f.close()
     except:
         with open(home + "/status.txt", "a", encoding='utf8') as f:
