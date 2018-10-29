@@ -1,0 +1,334 @@
+10-26 12:22 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 12:22 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 12:22 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 12:22 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 12:22 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 12:22 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 12:22 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 12:22 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 12:51 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 12:51 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 12:51 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 12:51 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 12:51 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 12:51 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 12:51 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 12:51 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 12:51 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 12:51 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.60ms
+10-26 12:55 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 12:55 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 12:55 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 12:55 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 12:55 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+
+10-26 12:55 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 12:55 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 12:56 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 12:56 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.60ms
+10-26 12:56 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 12:56 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 46.84ms
+10-26 12:58 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 12:58 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 12:58 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 12:58 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 12:58 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 12:58 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 12:58 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 12:58 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 12:58 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 12:58 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.64ms
+10-26 12:59 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 12:59 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 62.50ms
+10-26 12:59 - ApiHttpServer.post INFO  : A coming request at route "/api/system".
+10-26 12:59 - tornado.access.log_request INFO  : 200 POST /api/system (192.168.0.250) 15.63ms
+10-26 12:59 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 12:59 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 15.63ms
+10-26 14:28 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 14:28 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 14:28 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 14:28 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 14:28 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 14:28 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 14:28 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 14:28 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 14:28 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 14:29 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 14:29 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 14:29 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 14:29 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 14:29 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 14:29 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 14:29 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 14:29 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 14:29 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 14:29 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 46.88ms
+10-26 14:30 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 14:30 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 14:30 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 14:30 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 14:30 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 14:30 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 14:30 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 14:30 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 14:30 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 14:30 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.62ms
+10-26 14:30 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 14:30 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 62.51ms
+10-26 14:30 - ApiHttpServer.post INFO  : A coming request at route "/api/system".
+10-26 14:30 - tornado.access.log_request INFO  : 200 POST /api/system (192.168.0.250) 31.25ms
+10-26 15:01 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 15:01 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 15:01 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 15:01 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 15:01 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 15:01 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 15:01 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 15:01 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 15:01 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 15:01 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 141.55ms
+10-26 15:01 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 15:01 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 15.63ms
+10-26 15:03 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 15:03 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 15:03 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 15:03 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 15:03 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 15:03 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 15:03 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 15:03 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 15:03 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 15:03 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.60ms
+10-26 15:03 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 15:03 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 62.51ms
+10-26 15:03 - ApiHttpServer.post INFO  : A coming request at route "/api/system".
+10-26 15:03 - tornado.access.log_request INFO  : 200 POST /api/system (192.168.0.250) 31.25ms
+10-26 15:03 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:03 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:04 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:04 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:04 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:04 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:04 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:04 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:04 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:04 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:05 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:05 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:06 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 15:06 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 15:06 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 15:06 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 15:06 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 15:06 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 15:06 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 15:06 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 15:06 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 15:06 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 156.27ms
+10-26 15:06 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 15:06 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.250) 31.25ms
+10-26 15:07 - ApiHttpServer.post INFO  : A coming request at route "/api/system".
+10-26 15:07 - tornado.access.log_request INFO  : 200 POST /api/system (192.168.0.250) 31.25ms
+10-26 15:45 - tornado.access.log_request INFO  : 200 GET / (192.168.0.100) 15.63ms
+10-26 15:47 - tornado.access.log_request WARNING : 405 GET /api/status?taskid=sbbr (192.168.0.100) 0.00ms
+10-26 15:47 - tornado.access.log_request WARNING : 405 GET /api/status?taskid=sbbr (192.168.0.100) 15.58ms
+10-26 15:48 - ApiHttpServer.post INFO  : A coming request at route "/api/status?taskid=sbbr".
+10-26 15:48 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+10-26 15:48 - tornado.access.log_request WARNING : 400 POST /api/status?taskid=sbbr (192.168.0.100) 15.58ms
+10-26 15:48 - ApiHttpServer.post INFO  : A coming request at route "/api/status?taskid=sbbr".
+10-26 15:48 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+10-26 15:48 - tornado.access.log_request WARNING : 400 POST /api/status?taskid=sbbr (192.168.0.100) 0.00ms
+10-26 15:49 - ApiHttpServer.post INFO  : A coming request at route "/api/status?task_id=sbbr".
+10-26 15:49 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+10-26 15:49 - tornado.access.log_request WARNING : 400 POST /api/status?task_id=sbbr (192.168.0.100) 15.59ms
+10-26 15:50 - ApiHttpServer.post INFO  : A coming request at route "/api/status?task_id=sbbr".
+10-26 15:50 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+10-26 15:50 - tornado.access.log_request WARNING : 400 POST /api/status?task_id=sbbr (192.168.0.100) 0.00ms
+10-26 15:50 - ApiHttpServer.post INFO  : A coming request at route "/api/status?task_id=sbbr".
+10-26 15:50 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+10-26 15:50 - tornado.access.log_request WARNING : 400 POST /api/status?task_id=sbbr (192.168.0.100) 0.00ms
+10-26 15:50 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:50 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:52 - ApiHttpServer.post INFO  : A coming request at route "/api/status?task_id=sbbr".
+10-26 15:52 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+
+10-26 15:52 - tornado.access.log_request WARNING : 400 POST /api/status?task_id=sbbr (192.168.0.100) 0.00ms
+10-26 15:52 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:52 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+
+10-26 15:52 - tornado.access.log_request WARNING : 400 POST /api/status (192.168.0.100) 0.00ms
+10-26 15:52 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:52 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+10-26 15:52 - tornado.access.log_request WARNING : 400 POST /api/status (192.168.0.100) 15.58ms
+10-26 15:52 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:52 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+10-26 15:52 - tornado.access.log_request WARNING : 400 POST /api/status (192.168.0.100) 15.59ms
+10-26 15:54 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:54 - ApiHttpServer.post ERROR : Traceback (most recent call last):
+  File "D:\data-mining\environment\anacoma\lib\site-packages\http_api_exporter\Handler.py", line 25, in post
+    form = json.loads(self.request.body.decode('utf8'))
+  File "D:\data-mining\environment\anacoma\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\data-mining\environment\anacoma\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+10-26 15:54 - tornado.access.log_request WARNING : 400 POST /api/status (192.168.0.100) 15.64ms
+10-26 15:55 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:55 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.250) 0.00ms
+10-26 15:56 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 15:56 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:06 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:06 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:07 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:07 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 156.22ms
+10-26 16:07 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:07 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 156.23ms
+10-26 16:08 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:08 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 156.22ms
+10-26 16:08 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:08 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 156.23ms
+10-26 16:08 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:08 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 124.97ms
+10-26 16:24 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:24 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 156.22ms
+10-26 16:25 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 16:25 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.100) 46.84ms
+10-26 16:25 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 16:25 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.100) 46.88ms
+10-26 16:27 - ApiHttpServer.post INFO  : A coming request at route "/api/system".
+10-26 16:27 - tornado.access.log_request INFO  : 200 POST /api/system (192.168.0.100) 15.63ms
+10-26 16:27 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:27 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:28 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:28 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:28 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:28 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:28 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:28 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.100) 140.60ms
+10-26 16:28 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:28 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:29 - ApiHttpServer.post INFO  : A coming request at route "/api/begin".
+10-26 16:29 - tornado.access.log_request INFO  : 200 POST /api/begin (192.168.0.100) 46.88ms
+10-26 16:29 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:29 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 0.00ms
+10-26 16:30 - ApiHttpServer.post INFO  : A coming request at route "/api/system".
+10-26 16:30 - tornado.access.log_request INFO  : 200 POST /api/system (192.168.0.100) 15.63ms
+10-26 16:30 - ApiHttpServer.post INFO  : A coming request at route "/api/status".
+10-26 16:30 - tornado.access.log_request INFO  : 200 POST /api/status (192.168.0.100) 15.63ms
+10-26 16:35 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:35 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.61ms
+10-26 16:57 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:57 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.60ms
+10-26 16:57 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:57 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.64ms
+10-26 16:57 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:57 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.61ms
+10-26 16:57 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:57 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 124.98ms
+10-26 16:58 - ApiHttpServer.bind INFO  : Bind route "/api/system" with function "matrix_task"
+10-26 16:58 - ApiHttpServer.start INFO  : The server starts at port 8886
+10-26 16:58 - ApiHttpServer.bind INFO  : Bind route "/api/prepare" with function "prepare_one"
+10-26 16:58 - ApiHttpServer.start INFO  : The server starts at port 8888
+10-26 16:58 - ApiHttpServer.bind INFO  : Bind route "/api/begin" with function "begin_task"
+10-26 16:58 - ApiHttpServer.start INFO  : The server starts at port 8887
+10-26 16:58 - ApiHttpServer.bind INFO  : Bind route "/api/status" with function "status_task"
+10-26 16:58 - ApiHttpServer.start INFO  : The server starts at port 8885
+10-26 16:58 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:58 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 156.27ms
+10-26 16:58 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:58 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.64ms
+10-26 16:58 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:58 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.60ms
+10-26 16:58 - ApiHttpServer.post INFO  : A coming request at route "/api/prepare".
+10-26 16:58 - tornado.access.log_request INFO  : 200 POST /api/prepare (192.168.0.250) 140.60ms

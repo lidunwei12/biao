@@ -11,6 +11,8 @@ home = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.par
 
 
 def matrix_task(matrix_id, level_three_xls, level_two_xls):
+    level_three_xls = 'D:/data-mining/data' + level_three_xls
+    level_two_xls = 'D:/data-mining/data' + level_two_xls
     count = 0
     temp_ = [level_three_xls, level_two_xls]
     for j in temp_:
@@ -18,7 +20,7 @@ def matrix_task(matrix_id, level_three_xls, level_two_xls):
     if count == 0:
         with open(home + "/task.txt", "a", encoding='utf8') as f:
             f.write(
-                matrix_id +' '+ 'step_three' + ' ' + level_three_xls + ' ' + level_two_xls + '\n')
+                matrix_id + ' ' + 'step_three' + ' ' + level_three_xls + ' ' + level_two_xls + '\n')
             f.close()
         with open(home + "/status.txt", "a", encoding='utf8') as f:
             f.write(matrix_id + ' 待生成指标矩阵' + '\n')

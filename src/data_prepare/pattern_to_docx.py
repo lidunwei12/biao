@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Created on Thu Jul 30 16:21:28 2018
 
@@ -85,7 +85,7 @@ def doc_docx(doc_name, docx_name):
       """
     try:
         # 首先将doc转换成docx
-        word = client.Dispatch("Word.Application")
+        word = client.Dispatch("kwps.Application")
         doc = word.Documents.Open(doc_name)
         # 使用参数16表示将doc转换成docx
         doc.SaveAs(docx_name, 16)

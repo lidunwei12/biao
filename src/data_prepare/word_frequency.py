@@ -21,6 +21,8 @@ sys.path.append(rootPath)
 DATA_HOME = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/'))
 if not os.path.isdir(DATA_HOME):
     os.mkdir(DATA_HOME)
+import docx
+from docx import Document
 
 
 def word_choose(file_name):
@@ -33,13 +35,11 @@ def word_choose(file_name):
     content = []
     content_result = []
     try:
-        document = ZipFile(file_name)
-        xml = document.read("word/document.xml")
-        word_obj = BeautifulSoup(xml.decode("utf-8"))
-        texts = word_obj.findAll("w:t")
-        for text in texts:
-            content_result.append(text.text)
-            temp = analyse.extract_tags(text.text, withWeight=False, allowPOS=())
+        document = Document(file_name)
+        for paragraph in document.paragraphs:
+            print(paragraph.text)
+            content_result.append(paragraph.text)
+            temp = analyse.extract_tags(paragraph.text, withWeight=False, allowPOS=())
             content.extend(temp)
     except Exception as e:
         print(e)
@@ -142,4 +142,4 @@ def prepare_main(prepare_id, content_file, catalog_file):
         with open(home + "/status.txt", "a", encoding='utf8') as f:
             f.write(prepare_id + ' 准备挖掘失败'+'\n')
             f.close()
-# prepare_main('fcbf','E:\\biao\\temp/fcbf/content/','E:\\biao\\temp/fcbf/index/')
+# prepare_main('08su','D:\\data-mining\\biao\\temp/08su/content/','D:\\data-mining\\biao\\temp/08su/index/')

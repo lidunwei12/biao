@@ -22,4 +22,4 @@ def data_prepare(content_file, catalog_file):
     return json.loads(contents)
 
 
-print(data_prepare('E:/biao/temp/pdf2docx.zip', 'E:/biao/temp/区域质量.rar'))
+print(data_prepare('/test/data.rar', '/test/区域质量.rar'))

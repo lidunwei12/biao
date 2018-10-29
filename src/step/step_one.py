@@ -7,6 +7,7 @@ Created on Thu Jul 30 16:21:28 2018
 import os
 import subprocess
 import random
+import time
 
 DATA_HOME = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/'))
 run_home = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
@@ -33,6 +34,8 @@ def generate_random_str(random_length):
 
 
 def prepare_one(content_name, catalog_name):
+    content_name = 'D:/data-mining/data' + content_name
+    catalog_name = 'D:/data-mining/data' + catalog_name
     prepare_id = generate_random_str(4)
     temp_home = os.path.abspath(
         os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'temp/' + str(prepare_id)))
@@ -46,14 +49,24 @@ def prepare_one(content_name, catalog_name):
             os.mkdir(make_home)
     zip_main(content_name, DATA_HOME + '/' + str(prepare_id) + '/content/')
     zip_main(catalog_name, DATA_HOME + '/' + str(prepare_id) + '/index/')
-    content_home = DATA_HOME + '/' + str(prepare_id) + '/content/'
-    index_home = DATA_HOME + '/' + str(prepare_id) + '/index/'
-    f = open(run_home + '/task.txt', "a",encoding='utf8')
-    f.write(prepare_id+' step_one' + ' '+content_home+' '+index_home+'\n')
-    f.close()
-    with open(run_home + "/status.txt", "a",encoding='utf8') as f:
-        f.write(prepare_id+' 准备挖掘中 '+'\n')
+    count_content = sum([len(x) for _, _, x in os.walk(DATA_HOME + '/' + str(prepare_id) + '/content/')])
+    count_index = sum([len(x) for _, _, x in os.walk(DATA_HOME + '/' + str(prepare_id) + '/index/')])
+    if count_content != 0 and count_index != 0:
+        content_home = DATA_HOME + '/' + str(prepare_id) + '/content/'
+        index_home = DATA_HOME + '/' + str(prepare_id) + '/index/'
+        f = open(run_home + '/task.txt', "a", encoding='utf8')
+        f.write(prepare_id + ' step_one' + ' ' + content_home + ' ' + index_home + '\n')
         f.close()
-    return {
-        'prepare_id': prepare_id
-    }
+        with open(run_home + "/status.txt", "a", encoding='utf8') as f:
+            f.write(prepare_id + ' 准备挖掘中 ' + '\n')
+            f.close()
+        return {
+            'prepare_id': prepare_id,
+        }
+    else:
+        with open(run_home + "/status.txt", "a", encoding='utf8') as f:
+            f.write(prepare_id + ' 准备挖掘失败 ' + '\n')
+            f.close()
+        return {
+            'prepare_id': '',
+        }

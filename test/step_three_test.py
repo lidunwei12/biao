@@ -23,5 +23,5 @@ def data_system(matrix_id, level_three_xls, level_two_xls):
     return json.loads(contents)
 
 
-print(data_system('cm5a', 'E:/biao/temp/三级指标人工修正表re.xls',
-                 'E:/biao/temp/二级指标人工处理中re.xls',))
+print(data_system('sbbr', '/test/三级指标人工修正表re.xls',
+                 '/test/二级指标人工处理中re.xls',))

@@ -22,4 +22,4 @@ def data_status(task_id):
     return json.loads(contents)
 
 
-print(data_status('cm5a'))
+print(data_status('sbbr'))
